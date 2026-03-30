@@ -1,29 +1,17 @@
-import Header from "@/components/Header";
-import { useState } from "react";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
-  const [tasks, setTask] = useState([
-    { name: "clean the house", id: "1" },
-    { name: "buy groceries", id: "2" },
-    { name: "do homework", id: "3" },
-  ]);
-
   return (
-    <View>
-      <Header />
-      <View style={styles.container}>
-        <FlatList
-          data={tasks}
-          renderItem={({ item }) => <Text>{item.name}</Text>}
-        />
-      </View>
+    <View style={style.container}>
+      <Text>Hello react native!</Text>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
   container: {
-    padding: 40,
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
